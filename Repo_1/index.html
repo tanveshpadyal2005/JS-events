@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="alert('Hello, world!')">Click me</button><br><br>
+        <img src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__340.jpg"
+            onmouseover="alert('The mouse is over the image!')" width="250px"><br><b></b>
+        <input type="text" onkeydown="alert('A key was pressed!')">
+        <form onsubmit="alert('Form submitted!')">
+            <input type="text">
+            <button type="submit">Submit</button>
+        </form><br><br>
+        <img src="https://cdn.pixabay.com/photo/2018/04/06/00/25/trees-3294681__340.jpg"
+            onerror="alert('Error loading image!')" width="250px"><br><br>
+
+        <div onscroll="alert('You are scrolling the page!')">Scroll me</div>
+        <div oncontextmenu="alert('Right-clicked!')">Right-click me</div>
+        <!-- <div onmousemove="alert('Mouse moved!')">Move the mouse over me</div> -->
+
+
+        <!-- oncgange  -->
+        <input type="text" id="myInput" onchange="myFunction()">
+        <select id="mySelect" onchange="myFunction()">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+
+
+        <div onmouseenter="alert('Mouse entered!')" onmouseleave="alert('Mouse left!')">Hover over me</div>
+
+        <input type="text" onfocus="alert('Input field focused!')" onblur="alert('Input field blurred!')">
+
+        <button ondblclick="alert('Button double-clicked!')">Double-click me</button>
+        <div ontouchstart="alert('Touch started!')" ontouchmove="alert('Touch moved!')"
+            ontouchend="alert('Touch ended!')">Touch me</div>
+
+        <div oncontextmenu="alert('Right-clicked!')">Right-click me</div>
+
+    </div>
+
+    <script>
+        function myFunction() {
+            // Get the value of the input field or select dropdown
+            var inputVal = document.getElementById("myInput").value; // if using with input field
+            var selectVal = document.getElementById("mySelect").value; // if using with select dropdown
+
+            // Do something with the value
+            console.log("The value has been changed to: " + inputVal); // if using with input field
+            console.log("The selected value is: " + selectVal); // if using with select dropdown
+        }
+
+    </script>
+</body>
+
+</html>
